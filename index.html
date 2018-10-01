@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        section {
+            width: auto;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="form-group">
+    <div class="row">
+        <lable for="amount">Loan Amount:</lable>
+        <input id="amount" class="form-control" type="number" onchange="computeLoan()">
+    </div>
+</div>
+<div class="form-group">
+    <div class="row">
+        <lable for="downpayment">Dwon Payment:</lable>
+        <input id="downpayment" class="form-control" type="number" onchange="computeLoan()">
+    </div>
+</div>
+<div class="form-group">
+    <div class="row">
+        <lable for="rate">Interest Rate:</lable>
+        <input id="rate" class="form-control" type="number" onchange="computeLoan()">
+    </div>
+</div>
+<div class="form-group">
+    <div class="row">
+        <lable for="duration">Loan Duration</lable>
+        <input id="duration" class="form-control" type="number" onchange="computeLoan()">
+    </div>
+</div>
+
+<!--E = (P.r.(1+r)n) / ((1+r)n – 1)-->
+
+<div id="chartdiv"></div>
+
+
+<ul class="emi-ul">
+</ul>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="assets/js/amcharts.js"></script>
+<script src="assets/js/pie.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
